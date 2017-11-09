@@ -28,16 +28,16 @@ div#containerRow.row{
   background:transparent;
 }
 
-#jumbo1, #jumbo2, #jumbo3{
+#jumbo1, #jumbo3{
   background:#e6e6e6;
   border-radius:100%;
   padding:100px;
-  color:#a4d555;
+  color:#73a624;
 }
 
 h2#j1_title.text-center{
   font-family:'Lobster';
-  color:#a4d555;
+  color:#73a624;
 }
 
 #j1_description, #j3_description #j2_description,{

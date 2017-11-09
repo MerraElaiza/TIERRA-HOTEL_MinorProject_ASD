@@ -7,7 +7,7 @@
 
 #c1, #c2, #c3, #c4, #c5, #col1, #col2, #col3, #col4, #col5{
   height:100%;
-  background:#ccffbb;
+  background:#e6e6e6;
   padding:0px;
   margin:0px;
 }
@@ -24,6 +24,7 @@
   background:#86ac41;
   padding:10px;
   color:white;
+  font-family:'Oswald';
 }
 
 #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
@@ -54,18 +55,12 @@
   margin:0px;
 }
 
-div#first.row{
-  width:100%;
-  padding:0px;
-  background:transparent;
-}
-
 #firstpar, #secondpar{
   width:90%;
   padding:20px;
   margin-left:auto;
   font-family:'Archivo Narrow';
-  border-left:solid 10px #7cc355;
+  border-left:solid 10px #73a624;
   margin-bottom:10px;
 }
 

@@ -18,7 +18,7 @@ ul.nav.navbar-nav.navbar-right{
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover{
-  background:transparent;
+  background:#73a624;
   color:#ffffff;
   border-bottom:solid 2px white;
 }
@@ -49,12 +49,11 @@ div#colbttn.col-md-12{
 }
 
 #home_jumbotron{
-  height:77vh;
+  height:46vh;
   background:none;
   width:100%;
-  margin-top:7%;
-  padding-top:10%;
-  margin-bottom:20px;
+  margin-top:5%;
+  margin-bottom:20vh;
 }
 
 div#colbttn.col-md-12{
@@ -84,7 +83,7 @@ div#coldesc.col-md-12{
 #home_body{
   overflow:hidden;
   background:url('../../assets/img/cover.jpg');
-  background-size:100%;
+  background-size:cover;
 }
 
 div#intro.jumbotron{
@@ -107,16 +106,12 @@ a#bttnlink{
   margin-top:10px;
   text-shadow:3px 3px 4px #000000;
   background:rgba(255,255,255,0.5);
+  color:#73a624;
 }
 
 #home_booklabelcolumn{
   text-align:center;
   margin:0px;
-}
-
-#home_bookcolumn1, #home_bookcolumn2{
-  text-align:center;
-  padding-bottom:5px;
 }
 
 p#CI{
@@ -127,20 +122,18 @@ p#CI{
 
 #home_label1, #home_label2, #home_label3, #home_label4, #home_label5{
   font-size:15px;
-  color:#a4d555;
+  color:#73a624;
   font-family:'Oswald';
-  padding-right:10px;
-  padding-left:10px;
 }
 
 #home_date1, #home_date2{
-  border:solid 1px #86ac41;
+  border:solid 1px #73a624;
   font-size:15px;
-  color:#a4d555;
+  color:#73a624;
   background:#e6e6e6;
 }
 
-a#find{
+#search_availability{
   font-size:15px;
   color:white;
   margin-left:5px;
@@ -148,7 +141,7 @@ a#find{
 }
 
 div#colFind.col-md-12{
-  margin-top:5px;
+  margin:10px;
 }
 
 div#btt.col-md-12{
@@ -161,14 +154,15 @@ a#bttlink{
 
 #home_checkbutton{
   color:white;
-  background:#86ac41;
+  background:#73a624;
   width:200px;
   padding:7px;
   margin:0 auto;
+  margin-bottom:10px;
 }
 
 #home_bookaroomlabel{
-  color:#a4d555;
+  color:#73a624;
   margin:0 auto;
   font-family:'Allura';
   font-size:40px;
@@ -188,12 +182,12 @@ div#lastcol.col-md-12{
 #home_bookbutton{
   font-size:20px;
   padding:10px;
-  color:#a4d555;
+  color:#73a624;
   background-color:#e6e6e6;
   border-top-left-radius:30px;
   border-top-right-radius:30px;
   font-family:'Oswald';
-  border:solid 2px #86ac41;
+  border:solid 2px #73a624;
   border-bottom:none;
   margin:0px;
 }
@@ -211,9 +205,9 @@ span.glyphicon.glyphicon-collapse-down{
 #home_title{
   margin:0px;
   width:70%;
-  font-family:'Allura';
+  font-family:'Kaushan Script';
   padding:5px;
-  text-shadow:5px 3px 4px #000000;
+  text-shadow:5px 5px 4px #000000;
   background:rgba(255,255,255,0.5);
 }
 
@@ -235,13 +229,13 @@ div#first_Offers.row{
 }
 
 div.jumbotron{
-  background:#ccffbb;
-  color:#a4d555;
+  background:transparent;
+  color:#73a624;
   font-family:'Oswald';
 }
 
-hr{
-  border-top:solid 5px;
+.jumbotron > hr{
+  border-top:solid 5px #73a624;
   width:40px;
 }
 
@@ -250,14 +244,15 @@ hr{
 }
 
 #pay_row1, #pay_row2{
-  background:#ccffbb;
+  background:#e6e6e6;
   height:auto;
   width:100%;
   margin:0px;
+  padding:15px;
 }
 
 div#maplastrow.row{
-  background:#ccffbb;
+  background:transparent;
   height:auto;
   width:100%;
   margin:0px;
@@ -274,9 +269,11 @@ p.text-center{
 }
 
 div#mapj1.jumbotron{
-  color:#a4d555;
+  color:#73a624;
   margin:0px;
   font-family:'Archivo Narrow';
+  padding:50px;
+  text-align:center;
 }
 
 #t, #e{
@@ -289,16 +286,13 @@ p#i{
 
 #par, #par1{
   font-size:18px;
+  margin-bottom:0px;
+  font-family:'Open Sans';
+  padding-right:20px;
 }
 
 div#pli{
   text-align:center;
-}
-
-div#first_row.col-md-12{
-  padding:0px;
-  margin:0px;
-  background:transparent;
 }
 
 div#colfirst.col-md-12{
@@ -314,7 +308,7 @@ div#colfirst.col-md-12{
   width:80%;
   margin:0 auto;
   text-align:center;
-  border:double 7px #86ac41;
+  border:double 7px #73a624;
   background:#e6e6e6;
 }
 
@@ -330,6 +324,7 @@ hr#home_jumbotronhr3{
 
 body{
   background:linear-gradient(to bottom, #ccffcc 0%, #ffffff 100%);
+  overflow-x:hidden;
 }
 
 div#choose_check{
@@ -348,7 +343,13 @@ div#choose_check{
   background:linear-gradient(to right, #33cc33 0%, #ffffff 100%);
 }
 
-#choose_title{
+#confirm_title{
+  margin:0px;
+  padding:0px;
+  background:transparent;
+}
+
+#book_title{
   margin:0px;
   padding:0px;
   background:transparent;
@@ -378,33 +379,22 @@ p#choose_footer.company-name{
   margin-left:0px;
   padding:10px;
   font-size:20px;
-  background:#86ac41;
-  color:#ffffff;
+  color:#73a624;
   margin:5px;
-  text-align:center;
+  text-align:left;
+  border:2px solid #73a624;
+  border-radius:10px;
 }
 
-#chose_summaryrow1, #chose_summaryrow2, #chose_summaryrow3, #chose_summaryrow4{
+#book_summaryrow1, #book_summaryrow2, #book_summaryrow3, #book_summaryrow4, #search_summaryrow4, #search_summaryrow1, #search_summaryrow2, #search_summaryrow3{
   background:transparent;
   margin:0px;
   padding:0px;
 }
 
-#choose_text1, #choose_text2, #choose_text3, #choose_text4, #choose_text5, #choose_text6, #choose_text7, #choose_text8{
+#choose_text1, #choose_text2, #choose_text3, #choose_text4{
   padding:0px;
   margin:0px;
-}
-
-#chose_summaryrow1.row{
-  padding-bottom:10px;
-}
-
-div#chose_summaryrow3.row{
-  padding-bottom:10px;
-}
-
-div#chose_summaryrow4.row{
-  font-size:23px;
 }
 
 div#pay_selectcolumn.col-md-4{
@@ -415,15 +405,15 @@ div#pay_paymentcolumn.col-md-4{
   background:linear-gradient(to right, #33cc33 0%, #ffffff 100%);
 }
 
-#pay_1, #pay_2, #pay_3, #pay_4, #pay_5, #pay_6, #pay_7, #pay_8, #pay_9, #pay_10{
+#pay_1, #pay_2, #pay_3, #pay_4, #pay_5, #pay_6, #pay_7, #pay_8, #pay_9, #pay_10, #reservation_code, #reservation_email, #resrvation_label1, #resrvation_label2, #resrvation_label3, #resrvation_label4{
   font-size:15px;
-  color:#a4d555;
+  color:#73a624;
   padding:5px;
 }
 
 input.form-control{
   background:transparent;
-  border-color:#a4d555;
+  border-color:#73a624;
 }
 
 !pay_col1, #pay_col2{
@@ -439,16 +429,254 @@ div#home_button.row{
   margin:0px;
 }
 
-#room_s, #adult_s, #children {
-color: #a4d555;}
- #title, #cardtype, #month, #year {
-color: #a4d555;
+img#pool{
+  height:90vh;
+  width:100vw;
+}
+
+div#rooms_carousel.row{
+  margin:0px;
+  background:transparent;
+}
+
+img#lobby.img-rounded{
+  width:100vw;
+  height:90vh;
+}
+
+img#bedroom{
+  width:100vw;
+  height:90vh;
+}
+
+#early_bird, #christmass_offer{
+  height:555px;
+  margin:auto 0;
+  padding:40px;
+}
+
+hr{
+  border-top:solid 5px #73a624;
+  width:40px;
+}
+
+img#gift{
+  width:500px;
+  height:300px;
+}
+
+img#early_birdimg{
+  width:350px;
+  height:350px;
+}
+
+img#logo{
+  height:130px;
+}
+
+div#chose_summaryrow4.row{
+  margin-top:20px;
+}
+
+#search_bookingsummary_date, #search_bookingsummary_room, #search_bookingsummary_rate, #search_bookingsummary_total, #book_bookingsummary_date, #book_bookingsummary_room, #book_bookingsummary_rate, #book_bookingsummary_total{
+  height:30px;
+  background:transparent;
+  border:none;
+}
+
+div#book_right.col-md-4{
+  background:#e6e6e6;
+  padding:0px;
+}
+
+div#choose_right.col-md-4{
+  background:#e6e6e6;
+  margin-top:20px;
+}
+
+form#home_form{
+  margin:0px;
+  padding:0px;
+  width:100%;
+}
+
+div#home_bookcolumn2.col-md-7{
+  padding:0px;
+}
+
+#home_daterow.row, #home_otherdetailsrow{
+  margin:0px;
+  padding:0px;
+}
+
+#book_bookingsummary_jumbotron, #search_bookingsummary_jumbotron{
+  margin:0px;
+  background:#e6e6e6;
+}
+
+div#book_summaryrow4.row{
+  margin-top:20px;
+}
+
+div#book_summaryrow2.row{
+  margin-bottom:20px;
+}
+
+div#search_summaryrow4.row{
+  margin-top:20px;
+}
+
+div#search_summaryrow3.row{
+  margin-top:20px;
+}
+
+form#search_availabilityform{
+  width:100%;
+  margin-bottom:10px;
+  background:#e6e6e6;
+  padding:5px;
+}
+
+a#home_find{
+  padding:5px;
+  color:#ffffff;
+  font-family:'Oswald';
+}
+
+div#confirm_selectcolumn.col-md-4{
+  background:#33cc33;
+}
+
+div#confirm_selectconfirm.col-md-4{
+  background:linear-gradient(to right, #33cc33 0%, #ffffff 100%);
+}
+
+div#confirm_selectpayment.col-md-4{
+  background:#33cc33;
+}
+
+#confirm_labelcheck-in, #confirm_labelcheck-out, #confirm_labelroom, #confirm_labelguest, #confirm_labelpayment, #confirm_labelcode, #confirm_labelroomcount{
+  font-size:20px;
+}
+
+#confirm_text_areacheck-in, #confirm_text_areacheck-out, #confirm_text_areaguest, #confirm_text_areapayment, #confirm_text_arearoom, #confirm_text_areacode, #confirm_text_arearoomcount{
+  font-size:10px;
+  width:300px;
+  background:transparent;
+  border:none;
+}
+
+#confirm_cancel, #confirm_confirm{
+  font-size:20px;
+  padding:7px 30px;
+  background:#73a624;
+  color:#ffffff;
+  margin:20px;
+  font-family:'Oswald';
+}
+
+#confirm_buttoncolumn{
+  margin-top:70px;
+  text-align:right;
+}
+
+div#confirm_cancelbuttoncolumn.col-md-6{
+  text-align:right;
+}
+
+div#confirm_confirmbuttoncolumn.col-md-6{
+  text-align:left;
+}
+
+#confirm_labelcheck-incolumn, #confirm_labelcheck-outcolumn, #confirm_labelguestcolumn, #confirm_labelpaymentcolumn{
+  text-align:right;
+}
+
+#confirm_text_areacheck-incolumn, #confirm_text_areacheck-outcolumn, #confirm_text_areaguestcolumn, #confirm_text_areapaymentcolumn{
+  text-align:left;
+}
+
+a#book_donebutton{
+  font-size:15px;
+  color:#ffffff;
+  background:#73a624;
+  padding:7px 20px;
+  font-family:'Oswald';
+}
+
+div#book_done_column.col-md-12{
+  margin-top:30px;
+  text-align:right;
+}
+
+#reservation_code_input, #reservation_email_input{
+  width:500px;
+  margin:0 auto;
+}
+
+button#reservation_searchbutton.btn.btn-default{
+  background:#73a624;
+  border:none;
+  color:#ffffff;
+  margin-top:20px;
+}
+
+div#reservation_searchresult{
+  margin-top:30px;
+}
+
+#resrvation_column1, #resrvation_column2, #resrvation_column3, #resrvation_column4{
+  font-size:15px;
+}
+
+textarea{
+  height:30px;
+  background:transparent;
+  border:none;
+}
+
+textarea.form-control{
+  height:30px;
+  background:none;
+  border:none;
+}
+
+div#reservation_lastrow.row{
+  text-align:right;
+}
+
+#reservation_edit, #reservation_link, #edit_done{
+  padding:7px 15px;
+  margin-right:10px;
+  color:#ffffff;
+  background:#73a624;
+  font-family:'Oswald';
+}
+
+div#reservation_latcolumn.col-md-12{
+  padding:30px;
+  padding-bottom:15px;
+}
+
+form#edit_form{
+  padding:20px;
+}
+
+a#home_cancel{
+  color:#73a624;
+}
+
+ #title, #cardtype, #month, #year, #room_s, #adult_s, #children {
+color: #73a624;
 font-size: 20px;
 width: 80px;
 height:33px;
-background: transparent;}
+background: transparent;
+border: 1px solid #73a624;
+border-radius: 5px;}
 #cardtype, #month, #year {
 margin: 10px;
 }
 #cardtype {
 width: 150px;}
+

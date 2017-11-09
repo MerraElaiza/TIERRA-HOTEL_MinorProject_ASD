@@ -1,17 +1,12 @@
 .navbar{
   background:#373737;
   border:none;
-  margin-bottom:0px;
 }
 
 .navbar-nav > li > a{
   padding-top:23px;
   line-height:25px;
   font-family:'Open Sans';
-}
-
-ul.nav.navbar-nav.navbar-right{
-  font-size:15px;
 }
 
 .nav.navbar-nav.navbar-right li a{

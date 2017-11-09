@@ -2,25 +2,19 @@
   font-size:13px;
   padding-right:10px;
   padding-left:10px;
-  color:#a4d555;
+  color:#73a624;
   font-family:'Open Sans';
 }
 
 #d1, #d2{
   border:solid 1px #86ac41;
   font-size:10px;
-  color:#a4d555;
+  color:#73a624;
 }
 
-a#find{
-  font-size:15px;
+#search_buttoncheck{
   color:white;
-  margin-left:5px;
-}
-
-#choose_buttoncheck{
-  color:white;
-  background:#a4d555;
+  background:#73a624;
   width:170px;
   padding:6px;
 }
@@ -32,7 +26,7 @@ a#find{
  #btt, #btt1, #btt2, #btt3, #btt4 {
 	border: none;
 	background: none;
-	color: #a4d555;
+	color: #73a624;
 }
 #single, #double, #twin, #duplex, #suite {
 	text-align: left;
