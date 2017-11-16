@@ -37,16 +37,16 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li role="presentation"><a href="index.html">HOME </a></li>
-                    <li role="presentation"><a href="Rooms.html">ROOMS </a></li>
+                    <li role="presentation"><a href="Rooms.html">OUR HOTEL </a></li>
                     <li role="presentation"><a href="Offers.html">SPECIAL OFFERS&nbsp; </a></li>
                     <li role="presentation"></li>
-                    <li role="presentation"><a href="#">CONTACT &amp; LOCATION </a></li>
+                    <li role="presentation"><a href="Location.html">CONTACT &amp; LOCATION </a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div id="cont">
-        <div class="row" id="first">
+        <div class="row" id="book_title">
             <div class="col-md-12" id="choose_column">
                 <div id="choose_check">
                     <div class="col-md-4" id="pay_selectcolumn"><i class="glyphicon glyphicon-check"></i>
@@ -60,177 +60,157 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12" id="choose_title">
+            <div class="col-md-12">
                 <h2 class="text-left" id="title"><strong>YOUR RESERVATION</strong></h2></div>
         </div>
         <div class="row" id="pay_content">
-            <div class="col-md-8" id="pay_leftcolumn">
-                <div class="row" id="pay_row1">
-                    <div class="col-md-12" id="pay_col1">
-                        <div>
-                            <div class="row" id="petitle">
-                                <div class="col-md-12" id="pay_pe">
-                                    <h2>PERSONAL INFORMATION</h2>
-                                    <hr>
+            <div class="col-md-7" id="pay_leftcolumn">
+                <form id="book_form">
+                    <div class="row" id="pay_row1">
+                        <div class="col-md-12" id="pay_col1">
+                            <div>
+                                <div class="row" id="petitle">
+                                    <div class="col-md-12" id="pay_pe">
+                                        <h2>PERSONAL INFORMATION</h2>
+                                        <hr>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row" id="personal">
-                                <div class="col-md-2" id="pay_1">
-                                    <form>
-									<label>Title *</label>
-									<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="title">
-										<option value="Incoming 20" selected="">Mr.</option>
-										<option value="Incoming 40">Ms.</option>
-										<option value="Outgoing 20">Mrs.</option>
-										<option value="Outgoing 20">Miss</option>
-									</select>
-									</form>
-                                </div>
-                                <div class="col-md-5" id="pay_2">
-                                    <form>
-                                        <label>Lastname *</label>
-                                        <input class="form-control" type="text">
-                                    </form>
-                                </div>
-                                <div class="col-md-5" id="pay_3">
-                                    <form>
-                                        <label>Firstname *</label>
-                                        <input class="form-control" type="text">
-                                    </form>
-                                </div>
-                                <div class="col-md-4" id="pay_4">
-                                    <form>
-                                        <label>E-mail address *</label>
-                                        <input class="form-control" type="text">
-                                    </form>
-                                </div>
-                                <div class="col-md-4" id="pay_5">
-                                    <form>
-                                        <label>Confirm e-mail *</label>
-                                        <input class="form-control" type="text">
-                                    </form>
-                                </div>
-                                <div class="col-md-4" id="pay_6">
-                                    <form>
-                                        <label>Phone number *</label>
-                                        <input class="form-control" type="text">
-                                    </form>
+                                <div class="row" id="personal">
+                                    <div class="col-md-2" id="pay_1">
+										<label>Title *</label>
+										<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="title">
+											<option value="Mr." selected="">Mr.</option>
+											<option value="Ms.">Ms.</option>
+											<option value="Mrs.">Mrs.</option>
+											<option value="Miss">Miss</option>
+										</select>
+                                    </div>
+                                    <div class="col-md-5" id="pay_2">
+                                            <label>Lastname *</label>
+                                            <input class="form-control" type="text">
+                                    </div>
+                                    <div class="col-md-5" id="pay_3">
+                                            <label>Firstname *</label>
+                                            <input class="form-control" type="text">
+                                    </div>
+                                    <div class="col-md-4" id="pay_4">
+                                            <label>E-mail address *</label>
+                                            <input class="form-control" type="text">
+                                    </div>
+                                    <div class="col-md-4" id="pay_5">
+                                            <label>Confirm e-mail *</label>
+                                            <input class="form-control" type="text">
+                                    </div>
+                                    <div class="col-md-4" id="pay_6">
+                                            <label>Phone number *</label>
+                                            <input class="form-control" type="text">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row" id="first">
-                    <div class="col-md-12" id="first_row">
-                        <div class="jumbotron" id="Description"></div>
-                        <div class="row" id="pay_row2">
-                            <div class="col-md-12" id="pay_col2">
-                                <div>
-                                    <div class="row" id="cardtitle">
-                                        <div class="col-md-12" id="pay_pci">
-                                            <h2><strong>PAYMENT CARD INFORMATION</strong></h2>
-                                            <hr>
+                    <div class="row" id="pay_row2">
+                        <div class="col-md-12" id="pay_col2">
+                            <div class="jumbotron" id="Description"></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <div class="row" id="cardtitle">
+                                            <div class="col-md-12" id="pay_pci">
+                                                <h2><strong>PAYMENT CARD INFORMATION</strong></h2>
+                                                <hr>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row" id="card">
-                                        <div class="col-md-6" id="pay_7">
-                                            <form>
-                                                <label>Cardholder's Name *</label>
-                                                <input class="form-control" type="text">
-                                            </form>
-                                        </div>
-                                        <div class="col-md-6" id="pay_8">
-                                            <form>
-                                                <label>Card Number *</label>
-                                                <input class="form-control" type="text">
-                                            </form>
-                                        </div>
-                                        <div class="col-md-6" id="pay_9">
-                                            <form>
-                                                <label><strong>Card Type *</strong></label>
-												<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="cardtype">
-													<option value="Incoming 20" selected="">Visa</option>
-													<option value="Incoming 40">MasterCard</option>
-													<option value="Outgoing 20">3</option>
-													<option value="Outgoing 40">4</option>
-													<option value="Outgoing 40">5</option>
-												</select>
-                                            </form>
-                                        </div>
-                                        <div class="col-md-6" id="pay_10">
-                                            <form>
-                                                <label>Valid Until *</label>
+                                        <div class="row" id="card">
+                                            <div class="col-md-6" id="pay_7">
+                                                    <label>Cardholder's Name *</label>
+                                                    <input class="form-control" type="text">
+                                            </div>
+                                            <div class="col-md-6" id="pay_8">
+                                                    <label>Card Number *</label>
+                                                    <input class="form-control" type="text">
+                                            </div>
+                                            <div class="col-md-4" id="pay_9">
+                                                    <label><strong>Card Type *</strong></label>
+													<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="cardtype">
+														<option value="Visa" selected="">Visa</option>
+														<option value="MasterCard">MasterCard</option>
+													</select>
+                                            </div>
+                                            <div class="col-md-8" id="pay_10">
+                                                    <label>Valid Until *</label>
 													<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="month">
-													<option value="Incoming 20" selected="">Month</option>
-													<option value="Incoming 40">01</option>
-													<option value="Incoming 40">02</option>
-													<option value="Outgoing 20">03</option>
-													<option value="Outgoing 40">03</option>
-													<option value="Outgoing 40">04</option>
-													<option value="Incoming 40">05</option>
-													<option value="Outgoing 20">06</option>
-													<option value="Outgoing 40">07</option>
-													<option value="Outgoing 40">08</option>
-													<option value="Incoming 40">09</option>
-													<option value="Outgoing 20">10</option>
-													<option value="Outgoing 40">11</option>
-													<option value="Outgoing 40">12</option>
-												</select>
+														<option value="Incoming 20" selected="">Month</option>
+														<option value="Incoming 40">01</option>
+														<option value="Incoming 40">02</option>
+														<option value="Outgoing 20">03</option>
+														<option value="Outgoing 40">03</option>
+														<option value="Outgoing 40">04</option>
+														<option value="Incoming 40">05</option>
+														<option value="Outgoing 20">06</option>
+														<option value="Outgoing 40">07</option>
+														<option value="Outgoing 40">08</option>
+														<option value="Incoming 40">09</option>
+														<option value="Outgoing 20">10</option>
+														<option value="Outgoing 40">11</option>
+														<option value="Outgoing 40">12</option>
+													</select>
 													<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="year">
-													<option value="Incoming 20" selected="">Year</option>
-													<option value="Incoming 40">2017</option>
-													<option value="Incoming 40">2018</option>
-													<option value="Outgoing 20">2019</option>
-													<option value="Outgoing 40">2020</option>
-													<option value="Outgoing 40">2021</option>
-													<option value="Incoming 40">2022</option>
-													<option value="Outgoing 20">2023</option>
-													<option value="Outgoing 40">2024</option>
-													<option value="Outgoing 40">2025</option>
-												</select>
-                                            </form>
+														<option value="Incoming 20" selected="">Year</option>
+														<option value="Incoming 40">2017</option>
+														<option value="Incoming 40">2018</option>
+														<option value="Outgoing 20">2019</option>
+														<option value="Outgoing 40">2020</option>
+														<option value="Outgoing 40">2021</option>
+														<option value="Incoming 40">2022</option>
+														<option value="Outgoing 20">2023</option>
+														<option value="Outgoing 40">2024</option>
+														<option value="Outgoing 40">2025</option>
+													</select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-12" id="book_done_column"><a href="Confirm.html" id="book_donebutton">Done <i class="fa fa-check-circle"></i></a></div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-            <div class="col-md-4" id="choose_right">
-                <div class="jumbotron">
-                    <h2>BOOKING SUMMARY</h2>
+            <div class="col-md-5" id="book_right">
+                <div class="jumbotron" id="book_bookingsummary_jumbotron">
+                    <h2 class="text-center">BOOKING SUMMARY</h2>
                     <hr>
-                    <div class="row" id="chose_summaryrow1">
+                    <div class="row" id="book_summaryrow1">
                         <div class="col-md-6">
-                            <p class="text-left" id="choose_text1">Room </p>
+                            <p class="text-left" id="choose_text1">Date</p>
                         </div>
                         <div class="col-md-6">
-                            <p class="text-right" id="choose_text2">Php 0.00 </p>
-                        </div>
-                    </div>
-                    <div class="row" id="chose_summaryrow2">
-                        <div class="col-md-6">
-                            <p class="text-left" id="choose_text3">Sub Total</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="text-right" id="choose_text4">Php 0.00 </p>
+                            <textarea id="book_bookingsummary_date"></textarea>
                         </div>
                     </div>
-                    <div class="row" id="chose_summaryrow3">
+                    <div class="row" id="book_summaryrow2">
                         <div class="col-md-6">
-                            <p class="text-left" id="choose_text5">Taxes </p>
+                            <p class="text-left" id="choose_text2">Room </p>
                         </div>
                         <div class="col-md-6">
-                            <p class="text-right" id="choose_text6">Php 0.00</p>
+                            <textarea id="book_bookingsummary_room"></textarea>
                         </div>
                     </div>
-                    <div class="row" id="chose_summaryrow4">
+                    <div class="row" id="book_summaryrow3">
                         <div class="col-md-6">
-                            <p class="text-left" id="choose_text7"><strong>TOTAL </strong></p>
+                            <p class="text-left" id="choose_text3">Rate </p>
                         </div>
                         <div class="col-md-6">
-                            <p class="text-right" id="choose_text8"><strong>Php 0.00</strong></p>
+                            <textarea id="book_bookingsummary_rate"></textarea>
+                        </div>
+                    </div>
+                    <div class="row" id="book_summaryrow4">
+                        <div class="col-md-6">
+                            <p class="text-left" id="choose_text3">TOTAL </p>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea id="book_bookingsummary_rate"></textarea>
                         </div>
                     </div>
                 </div>
@@ -238,7 +218,7 @@
         </div>
     </div>
     <footer>
-        <p id="choose_footer" class="company-name">Company Name © 2017. All rights reserved.</p>
+        <p id="choose_footer" class="company-name">Tierra Hotel © 2016. All rights reserved.</p>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

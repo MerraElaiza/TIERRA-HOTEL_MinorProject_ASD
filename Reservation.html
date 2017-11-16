@@ -40,65 +40,63 @@
                     <li role="presentation"><a href="Rooms.html">OUR HOTEL </a></li>
                     <li role="presentation"><a href="Offers.html">SPECIAL OFFERS&nbsp; </a></li>
                     <li role="presentation"></li>
-                    <li class="active" role="presentation"><a href="#">CONTACT &amp; LOCATION </a></li>
+                    <li role="presentation"><a href="Location.html">CONTACT &amp; LOCATION&nbsp; </a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div id="cont">
-        <div class="row" id="first">
-            <div class="col-md-12" id="first_row">
-                <div class="jumbotron" id="Description">
-                    <h2 id="title"><strong>OUR LOCATION</strong></h2></div>
+        <form id="reservation_form">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-left" id="title"><strong>SEARCH RESERVATION</strong></h2></div>
             </div>
-        </div>
-        <div id="mapdiv"></div>
-    </div>
-    <div class="row" id="first">
-        <div class="col-md-12" id="first_row">
-            <div class="jumbotron" id="Description">
-                <h2 id="title"><strong>CONTACT</strong></h2>
-                <div class="row" id="maplastrow">
-                    <div class="col-md-12" id="maprow1">
-                        <div id="mapdiv1">
-                            <div class="jumbotron" id="mapj1">
-                                <p id="i">For reservations, comments and concerns:</p>
-                                <p id="t"><strong>Telephone No. </strong><i class="fa fa-phone"></i></p>
-                                <p>(082) 241-0566 </p>
-                                <p id="e"><strong>E-mail </strong><i class="fa fa-envelope-o"></i></p>
-                                <p>info@tierrahotel.com </p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-5" id="reservation_code">
+                    <label>Reservation Code</label>
+                    <input class="form-control" type="text" id="reservation_code_input">
+                </div>
+                <div class="col-md-5" id="reservation_email">
+                    <label>E-mail </label>
+                    <input class="form-control" type="text" id="reservation_email_input">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default" type="button" id="reservation_searchbutton">Search <i class="fa fa-search"></i></button>
                 </div>
             </div>
-        </div>
+            <div class="row" id="reservation_searchresult">
+                <div class="col-md-3" id="resrvation_label1">
+                    <label>Date </label>
+                </div>
+                <div class="col-md-3" id="resrvation_label2">
+                    <label>Room Type</label>
+                </div>
+                <div class="col-md-3" id="resrvation_label3">
+                    <label>No. of Room(s)</label>
+                </div>
+                <div class="col-md-3" id="resrvation_label4">
+                    <label>Guest(s) </label>
+                </div>
+                <div class="col-md-3" id="resrvation_column1">
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="col-md-3" id="resrvation_column2">
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="col-md-3" id="resrvation_column3">
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="col-md-3" id="resrvation_column4">
+                    <textarea class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="row" id="reservation_lastrow">
+                <div class="col-md-12" id="reservation_latcolumn"><a href="Edit_Reservation.html" id="reservation_edit">Edit Reservation <i class="fa fa-edit"></i></a><a href="index.html" id="reservation_link">Cancel Reservation <i class="fa fa-times-circle"></i></a></div>
+            </div>
+        </form>
     </div>
     <footer>
-        <div class="row" id="footer_row">
-            <div class="col-md-4 col-sm-6 footer-navigation">
-                <h3><a href="#">Tierra Hotel</a></h3>
-                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Our Hotel</a><strong> · </strong><a href="#">Offers </a><strong> · </strong><a href="#">Location </a><strong> · </strong><a href="#">Faq</a><strong> </strong></p>
-                <p class="company-name">Tierra Hotel © 2017</p>
-            </div>
-            <div class="col-md-4 col-sm-6 footer-contacts">
-                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                    <p><span class="new-line-span">J.P. Laurel Ave </span> Davao City, Philippines</p>
-                </div>
-                <div><i class="fa fa-phone footer-contacts-icon"></i>
-                    <p class="footer-center-info email text-left">(082) 241-0566&nbsp; </p>
-                </div>
-                <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                    <p>info@tierrahotel.com </p>
-                </div>
-            </div>
-            <div class="clearfix visible-sm-block"></div>
-            <div class="col-md-4 footer-about">
-                <h4>About Us</h4>
-                <p><strong>Tierra Hotel | Espinosa | Good | Lamberte | Ormo | Application Systems Development | BSIT-3A</strong> </p>
-                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-google-plus"></i></a></div>
-            </div>
-        </div>
+        <p id="choose_footer" class="company-name">Tierra Hotel © 2016. All rights reserved.</p>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

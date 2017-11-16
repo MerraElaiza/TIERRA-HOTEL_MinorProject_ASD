@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active" role="presentation"><a href="#"><strong>HOME </strong></a></li>
-                    <li role="presentation"><a href="Rooms.html"><strong>ROOMS </strong></a></li>
+                    <li role="presentation"><a href="Rooms.html"><strong>OUR HOTEL</strong> </a></li>
                     <li role="presentation"><a href="Offers.html"><strong>SPECIAL OFFERS</strong> </a></li>
                     <li role="presentation"></li>
                     <li role="presentation"><a href="Location.html"><strong>CONTACT &amp; LOCATION </strong></a></li>
@@ -45,50 +45,66 @@
             </div>
         </div>
     </nav>
+    <div><img class="img-responsive" src="assets/img/tierra_logo6.png" id="logo"></div>
     <div id="home_content">
         <div class="jumbotron" id="home_jumbotron"><img>
             <h1 class="text-nowrap" id="home_title"><strong>Welcome to Tierra!</strong></h1>
-            <p id="home_opening">Feel relaxed and be with nature in the middle of the city.</p>
+            <p id="home_opening"><strong>Feel relaxed and be with nature in the middle of the city.</strong></p>
         </div>
         <div class="row" id="home_button">
             <div class="col-md-12" id="home_booknow"><a href="#home_searchdetails" id="home_bookbutton"><strong>BOOK NOW</strong></a></div>
         </div>
         <div class="row" id="home_searchdetails">
-            <div class="col-md-12" id="home_booklabelcolumn">
-                <h2 id="home_bookaroomlabel"><strong>Book a Room</strong></h2></div>
-            <div class="col-md-12" id="home_bookcolumn1"><img src="assets/img/border.png" id="home_imgborder"></div>
-            <div class="col-md-7" id="home_bookcolumn2">
-                <label id="home_label1">Check-in </label>
-                <input type="date" id="home_date1">
-                <label id="home_label2">Check-out </label>
-                <input type="date" id="home_date2">
-            </div>
-            <div class="col-md-5">
-                <form id="home_form1">
-                    <label id="home_label3">Room(s) </label>
-					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="room_s">
-						<option value="Incoming 20" selected="">1</option>
-						<option value="Incoming 40">2</option>
-						<option value="Outgoing 20">3</option>
-						<option value="Outgoing 40">4</option>
-						<option value="Outgoing 40">5</option>
-					</select>
-                    <label id="home_label4">Adult(s) </label>
-					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="adult_s">
-						<option value="Incoming 20" selected="">1</option>
-						<option value="Incoming 40">2</option>
-						<option value="Outgoing 20">3</option>
-					</select>
-                    <label id="home_label5">Child(ren) </label>
-					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="children">
-						<option value="Incoming 20" selected="">0</option>
-						<option value="Incoming 40">1</option>
-						<option value="Outgoing 20">2</option>
-					</select>
+            <div class="col-md-12">
+                <form id="home_form">
+                    <div class="col-md-12" id="home_booklabelcolumn">
+                        <h2 id="home_bookaroomlabel"><strong>Book a Room</strong></h2></div>
+                    <div class="col-md-12" id="home_bookcolumn1"><img src="assets/img/border.png" id="home_imgborder"></div>
+                    <div class="col-md-7" id="home_bookcolumn2">
+                        <div class="row" id="home_daterow">
+                            <div class="col-md-6" id="home_check_in_column">
+                                <label id="home_label1">Check-in </label>
+                                <input class="form-control" type="date" id="home_date1">
+                            </div>
+                            <div class="col-md-6" id="home_check_out_column">
+                                <label id="home_label2">Check-out </label>
+                                <input class="form-control" type="date" id="home_date2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row" id="home_otherdetailsrow">
+                            <div class="col-md-4">
+                                <label id="home_label3">Room(s) </label>
+								<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="room_s">
+									<option value="1" selected="">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="home_label4">Adult(s) </label>
+								<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="adult_s">
+									<option value="1" selected="">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+								</select>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="home_label5">Child(ren) </label>
+								<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="children">
+									<option value="0" selected="">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="colFind">
+                        <div id="home_checkbutton"><i class="glyphicon glyphicon-check"></i><a href="Search.html" id="home_find">Check Availability</a></div><a href="Reservation.html" id="home_cancel"><span style="text-decoration: underline;">Change/Cancel Reservation</span></a></div>
                 </form>
-            </div>
-            <div class="col-md-12" id="colFind">
-                <div id="home_checkbutton"><i class="glyphicon glyphicon-check"></i><a href="Search.html" id="find">Check Availability</a></div>
             </div>
         </div>
     </div>
