@@ -1,0 +1,38 @@
+input.form-control{
+  width:400px;
+  height:50px;
+  margin-top:15px;
+}
+
+form{
+  margin:0 auto;
+  width:400px;
+}
+
+div#space{
+  height:50px;
+}
+
+p.lead.text-uppercase.text-center.text-info{
+  margin-top:50px;
+}
+
+div#table{
+  margin-top:30px;
+}
+
+div.table-responsive{
+  padding-left:20px;
+  padding-right:20px;
+}
+
+button.btn.btn-warning.btn-lg{
+  margin-top:10px;
+  width:150px;
+  margin-left:125px;
+}
+
+button.btn.btn-default{
+  margin-left:10px;
+}
+
