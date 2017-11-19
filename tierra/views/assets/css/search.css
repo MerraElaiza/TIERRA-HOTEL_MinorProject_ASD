@@ -1,0 +1,33 @@
+#choose_l1, #choose_l2, #choose_l3, #choose_l4, #choose_l5{
+  font-size:13px;
+  padding-right:10px;
+  padding-left:10px;
+  color:#73a624;
+  font-family:'Open Sans';
+}
+
+#d1, #d2{
+  border:solid 1px #86ac41;
+  font-size:10px;
+  color:#73a624;
+}
+
+#search_buttoncheck{
+  color:white;
+  background:#73a624;
+  width:170px;
+  padding:6px;
+}
+
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+ #btt, #btt1, #btt2, #btt3, #btt4 {
+	border: none;
+	background: none;
+	color: #73a624;
+}
+#single, #double, #twin, #duplex, #suite {
+	text-align: left;
+}

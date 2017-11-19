@@ -1,0 +1,28 @@
+#firstrow, #secondrow{
+  width:70%;
+  margin:70px auto;
+  padding:20px;
+  background:#efefef;
+  margin-top:0px;
+  margin-bottom:10px;
+}
+
+#choose_label1, #choose_label2, #choose_label3{
+  font-size:xx-large;
+  padding:10px;
+  margin:0px;
+}
+
+#personal, #card{
+  width:100%;
+  background:transparent;
+  margin:0px;
+}
+
+#petitle, #cardtitle{
+  padding:0px;
+  background:transparent;
+  font-family:'Oswald';
+  color:#73a624;
+}
+
