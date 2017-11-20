@@ -51,7 +51,7 @@
         <div class="row" id="first">
             <div class="col-md-12" id="choose_column">
                 <div id="choose_check">
-                    <div class="col-md-4" id="choose_selectcolumn"><i class="glyphicon glyphicon-check"></i>
+                    <div class="col-md-4" id="choose_selectcolumn"><i class="glyphicon glyphicon-unchecked"></i>
                         <label id="choose_label1">SELECT ROOM</label>
                     </div>
                     <div class="col-md-4"><i class="glyphicon glyphicon-unchecked"></i>
@@ -96,9 +96,17 @@
                                 <?php
                                     
                                     $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+                                
+                                    $query2 = "SELECT * FROM adminreserve WHERE roomType = 'Single'";
+                                    $res2 = mysqli_query($link, $query2);
+                                    $bad = mysqli_num_rows($res2);
+                                    $query3 = "SELECT * FROM book ORDER BY book_id DESC LIMIT 1";
+                                    $res3 = mysqli_query($link, $query3);
+                                    $bad2 = mysqli_fetch_assoc($res3);
+                                    $ans = 7 - $bad;
+                                
 					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Single'";
 							        $res = mysqli_query($link, $query);
-                                    $res2 = array();
                                 
                                     while ($rows = mysqli_fetch_assoc($res))
 							        {
@@ -124,10 +132,13 @@
                                     <p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
                             </div>
-                        </div>
+                        </div><?php if ($ans >= $bad2['rooms']) { ?>
                         <div class="row" id="row4">
                             <div class="col-md-12" id="row4col"><input type="submit" name="single" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
-                        </div>
+                        </div><?php } else { echo "<h4>".$ans." available room(s)</h4>" ?>
+                        <div class="row" id="row4">
+                            <div class="col-md-12" id="row4col"><input type="submit" name="single" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;" disabled/></div>
+                        </div><?php } ?>
                     </div>
                     </form>
                 </div>
@@ -157,9 +168,17 @@
                                 <?php
                                     
                                     $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+                                
+                                    $query2 = "SELECT * FROM adminreserve WHERE roomType = 'Double'";
+                                    $res2 = mysqli_query($link, $query2);
+                                    $bad = mysqli_num_rows($res2);
+                                    $query3 = "SELECT rooms FROM book ORDER BY book_id DESC LIMIT 1";
+                                    $res3 = mysqli_query($link, $query3);
+                                    $bad2 = mysqli_fetch_assoc($res3);
+                                    $ans = 7 - $bad;
+                                
 					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Double'";
 							        $res = mysqli_query($link, $query);
-                                    $res2 = array();
                                 
                                     while ($rows = mysqli_fetch_assoc($res))
 							        {
@@ -186,11 +205,13 @@
 							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
                             </div>
-                        </div>
+                        </div><?php if ($ans >= $bad2['rooms']) { ?>
                         <div class="row" id="row4">
                             <div class="col-md-12" id="row4col"><input type="submit" name="double" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
-                            
-                        </div>
+                        </div><?php } else { echo "<h4>".$ans." available room(s)</h4>" ?>
+                        <div class="row" id="row4">
+                            <div class="col-md-12" id="row4col"><input type="submit" name="double" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;" disabled/></div>
+                        </div><?php } ?>
                     </div>
                     </form>
                 </div>
@@ -220,6 +241,15 @@
                                 <?php
                                     
                                     $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+                                
+                                    $query2 = "SELECT * FROM adminreserve WHERE roomType = 'Twin Double'";
+                                    $res2 = mysqli_query($link, $query2);
+                                    $bad = mysqli_num_rows($res2);
+                                    $query3 = "SELECT rooms FROM book ORDER BY book_id DESC LIMIT 1";
+                                    $res3 = mysqli_query($link, $query3);
+                                    $bad2 = mysqli_fetch_assoc($res3);
+                                    $ans = 7 - $bad;
+                                
 					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Twin Double'";
 							        $res = mysqli_query($link, $query);
                                     $res2 = array();
@@ -250,10 +280,13 @@
 							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
                             </div>
-                        </div>
+                        </div><?php if ($ans >= $bad2['rooms']) { ?>
                         <div class="row" id="row6">
                             <div class="col-md-12" id="row6col"><input type="submit" name="twin" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
-                        </div>
+                        </div><?php } else { echo "<h4>".$ans." available room(s)</h4>" ?>
+                        <div class="row" id="row6">
+                            <div class="col-md-12" id="row6col"><input type="submit" name="twin" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;" disabled/></div>
+                        </div><?php } ?>
                     </div>
                     </form>
                 </div>
@@ -279,6 +312,15 @@
                                 <?php
                                     
                                     $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+                                
+                                    $query2 = "SELECT * FROM adminreserve WHERE roomType = 'Duplex'";
+                                    $res2 = mysqli_query($link, $query2);
+                                    $bad = mysqli_num_rows($res2);
+                                    $query3 = "SELECT rooms FROM book ORDER BY book_id DESC LIMIT 1";
+                                    $res3 = mysqli_query($link, $query3);
+                                    $bad2 = mysqli_fetch_assoc($res3);
+                                    $ans = 2 - $bad;
+                                
 					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Duplex'";
 							        $res = mysqli_query($link, $query);
                                     $res2 = array();
@@ -309,10 +351,13 @@
 							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
                             </div>
-                        </div>
+                        </div><?php if ($ans >= $bad2['rooms']) { ?>
                         <div class="row" id="row8">
                             <div class="col-md-12" id="row8col"><input type="submit" name="duplex" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
-                        </div>
+                        </div><?php } else { echo "<h4>".$ans." available room(s)</h4>" ?>
+                        <div class="row" id="row8">
+                            <div class="col-md-12" id="row8col"><input type="submit" name="duplex" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;" disabled/></div>
+                        </div><?php } ?>
                     </div>
                     </form>
                 </div>
@@ -340,6 +385,15 @@
                                 <?php
                                     
                                     $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+                                
+                                    $query2 = "SELECT * FROM adminreserve WHERE roomType = 'Presidential Suite'";
+                                    $res2 = mysqli_query($link, $query2);
+                                    $bad = mysqli_num_rows($res2);
+                                    $query3 = "SELECT rooms FROM book ORDER BY book_id DESC LIMIT 1";
+                                    $res3 = mysqli_query($link, $query3);
+                                    $bad2 = mysqli_fetch_assoc($res3);
+                                    $ans = 2 - $bad;
+                                
 					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Presidential Suite'";
 							        $res = mysqli_query($link, $query);
                                     $res2 = array();
@@ -371,10 +425,13 @@
 							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
                             </div>
-                        </div>
+                        </div><?php if ($ans >= $bad2['rooms']) { ?>
                         <div class="row" id="row10">
                             <div class="col-md-12" id="row10col"><input type="submit" name="p_suite" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
-                        </div>
+                        </div><?php } else { echo "<h4>".$ans." available room(s)</h4>" ?>
+                        <div class="row" id="row10">
+                            <div class="col-md-12" id="row10col"><input type="submit" name="p_suite" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;" disabled/></div>
+                        </div><?php } ?>
                     </div>
                     </form>
                 </div>

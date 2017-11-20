@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" style="opacity: 0.1">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -54,117 +54,65 @@
                     <h2 class="text-left" style=" color: #73a624; font-family: 'Oswald'; text-align: left; text-indent:30px; width:70%; border-bottom: 4px solid #73a624; margin-bottom: 15px; padding-bottom: 10px;"><strong>EDIT RESERVATION</strong></h2>
                     <?php 
 							$link = mysqli_connect("localhost:3306", "root", "", "tierra2");
-					
-							$query = "SELECT adults, children FROM book WHERE r_code = \"".$code."\"";
-							$res = mysqli_query($link, $query);
-                            $res2 = array();
-			
-							while ($rows = mysqli_fetch_assoc($res))
-							{
-							
-						?>
                     
-                        <div class="row" id="choose_search">
-                            <div class="col-md-1">
-                                <label id="choose_l1">Code </label>
-                                <input class="form-control" type="text" id="check-in" name="code" value="<?php echo $code ?>" readonly>
-                            </div>
-                            <div class="col-md-2">
-                                <label id="choose_l1">Check-in </label>
-                                <input class="form-control" type="date" id="check-in" name="check_in" value="<?php echo $check_in ?>">
-                            </div>
-                            <div class="col-md-2">
-                                <label id="choose_l2">Check-out </label>
-                                <input class="form-control" type="date" id="check-out" name="check_out" value="<?php echo $check_out ?>">
-                            </div>
-                            <div class="col-md-7" id="search_infos">
-                                <div class="row">
-								<div class="col-md-3">
-                                    <label id="choose_l5">Type</label>
-                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="type" name="roomType">
-											<option value="<?php echo $roomType ?>" selected=""><?php echo $roomType ?></option>
-                                            <option value="Single">Single</option>
-											<option value="Double">Double</option>
-											<option value="Twin Double">Twin Double</option>
-											<option value="Duplex">Duplex</option>
-											<option value="Presidential Suite">Presidential Suite</option>
-										</select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label id="choose_l3">Room(s) </label>
-                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="room_s" name="rooms">
-											<option value="<?php echo $rooms ?>" selected=""><?php echo $rooms ?></option>
-                                            <option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-                                            <option value="6">6</option>
-											<option value="7">7</option>
-										</select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label id="choose_l4">Adult(s) </label>
-                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="adult_s" name="adults">
-											<option value="<?php echo $rows['adults']; ?>" selected=""><?php echo $rows['adults'] ?></option>
-                                            <option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-										</select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label id="choose_l5">Child(ren) </label>
-                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="children" name="children">
-											<option value="<?php echo $rows['children']; ?>" selected=""><?php echo $rows['children']; ?></option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-										</select>
-                                    </div><?php } 
-                                   
-                    
-                                    $query3 = "SELECT * FROM adminreserve WHERE roomType = \"".$roomSize."\" AND code != \"".$r_code."\"";
-                                    $res3 = mysqli_query($link, $query3);
+                            $query3 = "SELECT * FROM adminreserve WHERE roomType = \"".$roomSize."\" AND code != \"".$r_code."\"";
+                            $res3 = mysqli_query($link, $query3);
                                     
-                                    $count = 0;
-                                    $cin = new DateTime($c_in);
-                                    $cout = new DateTime($c_out);
+                            $count = 0;
+                            $cin = new DateTime($c_in);
+                            $cout = new DateTime($c_out);
                     
-                                    while($row = mysqli_fetch_assoc($res3)) {
-                                        $cin2 = new DateTime($row['check_in']);
-                                        $cout2 = new DateTime($row['check_out']);
+                            while($row = mysqli_fetch_assoc($res3)) {
+                                $cin2 = new DateTime($row['check_in']);
+                                $cout2 = new DateTime($row['check_out']);
                                         
-                                        if ($roomSize == "Presidential Suite" || $roomSize == "Duplex") {
-                                            if (mysqli_num_rows($res3) == 2) {
-                                                if (($cin < $cout2 && $cin > $cin2) || ($cout > $cin2 &&    $cout < $cout2)) {
-                                                    $count = $count + 1;
-                                                }
-                                            }
-                                            
+                                if ($roomSize == "Presidential Suite" || $roomSize == "Duplex") {
+                                    //if (mysqli_num_rows($res3) == 2) {
+                                        if ($cin <= $cin2 && $cout > $cin2 && $cout <= $cout2) {
+                                            $count = $count + 1;
                                         }
-                                        if ($roomSize == "Single" || $roomSize == "Double" || $roomSize == "Twin Double") {
-                                            if (mysqli_num_rows($res3) == 7) {
-                                                if (($cin < $cout2 && $cin > $cin2) || ($cout > $cin2 &&    $cout < $cout2)) {
-                                                    $count = $count + 1;
-                                                }
-                                            }
-                                            
+                                        else if ($cin >= $cin2 && $cin < $cout2 && $cout >= $cout2) {
+                                            $count = $count + 1;
                                         }
-                                    }
+                                        else if ($cin >= $cin2 && $cin <= $cout2 && $cout <= $cout2) {
+                                            $count = $count + 1;
+                                        }
+                                        else if ($cin <= $cin2 && $cout >= $cout2) {
+                                            $count = $count + 1;
+                                        }
+                                   // }
+                                            
+                                }
+                                if ($roomSize == "Single" || $roomSize == "Double" || $roomSize == "Twin Double") {
+                                   // if (mysqli_num_rows($res3) == 7) {
+                                        if ($cin <= $cin2 && $cout > $cin2 && $cout <= $cout2) {
+                                            $count = $count + 1;
+                                        }
+                                        else if ($cin >= $cin2 && $cin < $cout2 && $cout >= $cout2) {
+                                            $count = $count + 1;
+                                        }
+                                        else if ($cin >= $cin2 && $cin <= $cout2 && $cout <= $cout2) {
+                                            $count = $count + 1;
+                                        }
+                                        else if ($cin <= $cin2 && $cout >= $cout2) {
+                                            $count = $count + 1;
+                                        }
+                                   // }
+                                            
+                                }
+                            }
                                     
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
+                    ?>
                 </div>
             </div>
             <?php
                 
-            if ($roomSize == "Presidential Suite" || $roomSize == "Duplex") {
-                if ($count == 2) {
-                    echo "<center><h3> No Available Rooms</h3></center>";
-                }
-                else {
-                     echo "<center><h3> Available </h3></center>";
+                if ($roomSize == "Presidential Suite" || $roomSize == "Duplex") {
+                    if ($count == 2) {
+                        echo "<center><h3> No Available Rooms</h3><br><h5>Please use browser back button to return to editing.</h5></center>";
+                    }
+                    else {
+                        echo "<center><h3>".(2 - $count)." Room(s) Available </h3><br><h5>Please use browser back button to return to editing.</h5></center>";
             ?>
             <div class="row" id="reservation_lastrow">
                 <div class="col-md-12" id="reservation_latcolumn"><input id="edit_done" type="submit" name="edit" value="Save"></div>
@@ -173,10 +121,10 @@
             
                 else if ($roomSize == "Single" || $roomSize == "Double" || $roomSize == "Twin Double") {
                     if ($count == 7) {
-                        echo "<center><h3> No Available Rooms</h3></center>";
+                        echo "<center><h3> No Available Room(s)</h3><br><h5>Please use browser back button to return to editing.</h5></center>";
                     }
                     else {
-                        echo "<center><h3> Available </h3></center>";
+                        echo "<center><h3>".(7 - $count)." Available Room(s) </h3><br><h5>Please use browser back button to return to editing.</h5></center>";
             ?>
             <center><div class="row" id="reservation_lastrow">
                 <div class="col-md-12" id="reservation_latcolumn"><input id="edit_done" type="submit" name="edit" value="Save"></div>

@@ -55,7 +55,7 @@
                     <div class="col-md-4" id="confirm_selectcolumn"><i class="glyphicon glyphicon-check"></i>
                         <label id="choose_label1">SELECT ROOM</label>
                     </div>
-                    <div class="col-md-4" id="confirm_selectpayment"><i class="glyphicon glyphicon-unchecked"></i>
+                    <div class="col-md-4" id="confirm_selectpayment"><i class="glyphicon glyphicon-check"></i>
                         <label id="choose_label2">MAKE PAYMENT</label>
                     </div>
                     <div class="col-md-4" id="confirm_selectconfirm"><i class="glyphicon glyphicon-unchecked"></i>
