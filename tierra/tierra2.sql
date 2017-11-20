@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2017 at 11:19 PM
+-- Generation Time: Nov 20, 2017 at 09:49 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -65,18 +65,6 @@ CREATE TABLE `adminreserve` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin_log`
---
-
-CREATE TABLE `admin_log` (
-  `userid` int(5) NOT NULL,
-  `login_time` datetime NOT NULL,
-  `logout_time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `book`
 --
 
@@ -95,11 +83,11 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`book_id`, `r_code`, `check_in`, `check_out`, `rooms`, `adults`, `children`) VALUES
-(1, 'PY3VIG35', '2017-11-01', '2017-11-07', 1, 1, 0),
+(1, 'PY3VIG35', '2017-11-15', '2017-11-17', 1, 1, 0),
 (2, 'HFZDYOB6', '2017-11-06', '2017-11-09', 3, 2, 2),
 (5, 'GS4TAHOD', '2017-11-15', '2017-11-21', 1, 2, 0),
 (8, 'TLJYQWU3', '2017-11-16', '2017-11-18', 2, 1, 2),
-(12, 'QRI0B5BH', '2017-11-14', '2017-11-15', 1, 2, 0);
+(12, 'QRI0B5BH', '2017-11-14', '2017-11-15', 6, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -196,7 +184,7 @@ CREATE TABLE `select_room` (
 
 INSERT INTO `select_room` (`book_id`, `roomSize`, `rate`) VALUES
 (1, 'Double', 1000),
-(2, 'Presidential Suite', 5000),
+(2, 'Duplex', 5000),
 (5, 'Presidential Suite', 5000),
 (8, 'Presidential Suite', 3500),
 (12, 'Double', 1000);
@@ -218,12 +206,6 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`userid`);
-
---
--- Indexes for table `admin_log`
---
-ALTER TABLE `admin_log`
   ADD PRIMARY KEY (`userid`);
 
 --
