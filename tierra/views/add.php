@@ -36,7 +36,6 @@
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li role="presentation"><a href="../views/userList.php">Admin <?php echo $userid ?> </a></li>
-                        <li role="presentation"><a href="#">Administrator Log </a></li>
                         <li role="presentation" class="active" style="color:#ffffff; background:#73a624; border-bottom: 2px solid white;"><a href="#">Guest Log </a></li>
                         <li role="presentation"><a href="../views/login.php">Sign Out</a></li>
                     </ul>
@@ -49,14 +48,7 @@
     </div>
     <div>
         <div></div>
-        <!--<form action="<?//php $_PHP_SELF ?>" method="POST">
-            <input class="form-control input-lg" type="text" placeholder="Check-in" name="check_in">
-            <input class="form-control input-lg" type="text" placeholder="Check-out" name="check_out">
-            <input class="form-control input-lg" type="text" placeholder="Room Type" name="roomType">
-            <input class="form-control input-lg" type="text" placeholder="Number of rooms" name="rooms">
-            <input class="form-control input-lg" type="text" placeholder="Total guests" name="guests">
-            <button class="btn btn-warning btn-lg" type="submit" name="submit" value="ship">Add </button>
-        </form>-->
+        
     </div>
     <div class="col-xs-1"></div>
     <div id="table" class="col-xs-10">

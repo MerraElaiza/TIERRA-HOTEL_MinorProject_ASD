@@ -36,7 +36,6 @@
         <div class="collapse navbar-collapse" id="navcol-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="active" role="presentation" style="color:#ffffff; border-bottom: 2px solid white;"><a href="#">Admin <?php echo $userid ?> </a></li>
-            <li role="presentation"><a href="#">Administrator Log </a></li>
             <li role="presentation"><a href="../views/add.php">Guest Log </a></li>
             <li role="presentation"><a href="../views/login.php">Sign Out </a></li>
           </ul>

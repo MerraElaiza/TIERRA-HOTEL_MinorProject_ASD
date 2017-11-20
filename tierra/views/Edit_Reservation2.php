@@ -48,7 +48,7 @@
         </div>
     </nav>
     <div id="cont">
-        <form id="reservation_form" action="Edit_Reservation2.php" method="post">
+        <form id="reservation_form" action="Reservation.php" method="post">
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="text-left" style=" color: #73a624; font-family: 'Oswald'; text-align: left; text-indent:30px; width:70%; border-bottom: 4px solid #73a624; margin-bottom: 15px; padding-bottom: 10px;"><strong>EDIT RESERVATION</strong></h2>
@@ -119,15 +119,69 @@
 											<option value="1">1</option>
 											<option value="2">2</option>
 										</select>
-                                    </div><?php } ?>
+                                    </div><?php } 
+                                   
+                    
+                                    $query3 = "SELECT * FROM adminreserve WHERE roomType = \"".$roomSize."\" AND code != \"".$r_code."\"";
+                                    $res3 = mysqli_query($link, $query3);
+                                    
+                                    $count = 0;
+                                    $cin = new DateTime($c_in);
+                                    $cout = new DateTime($c_out);
+                    
+                                    while($row = mysqli_fetch_assoc($res3)) {
+                                        $cin2 = new DateTime($row['check_in']);
+                                        $cout2 = new DateTime($row['check_out']);
+                                        
+                                        if ($roomSize == "Presidential Suite" || $roomSize == "Duplex") {
+                                            if (mysqli_num_rows($res3) == 2) {
+                                                if (($cin < $cout2 && $cin > $cin2) || ($cout > $cin2 &&    $cout < $cout2)) {
+                                                    $count = $count + 1;
+                                                }
+                                            }
+                                            
+                                        }
+                                        if ($roomSize == "Single" || $roomSize == "Double" || $roomSize == "Twin Double") {
+                                            if (mysqli_num_rows($res3) == 7) {
+                                                if (($cin < $cout2 && $cin > $cin2) || ($cout > $cin2 &&    $cout < $cout2)) {
+                                                    $count = $count + 1;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                    
+                                    ?>
                                 </div>
                             </div>
                         </div>
                 </div>
             </div>
+            <?php
+                
+            if ($roomSize == "Presidential Suite" || $roomSize == "Duplex") {
+                if ($count == 2) {
+                    echo "<center><h3> No Available Rooms</h3></center>";
+                }
+                else {
+                     echo "<center><h3> Available </h3></center>";
+            ?>
             <div class="row" id="reservation_lastrow">
-                <div class="col-md-12" id="reservation_latcolumn"><input id="edit_done" type="submit" name="edit" value="Check Availability"></div>
+                <div class="col-md-12" id="reservation_latcolumn"><input id="edit_done" type="submit" name="edit" value="Save"></div>
             </div>
+            <?php } } 
+            
+                else if ($roomSize == "Single" || $roomSize == "Double" || $roomSize == "Twin Double") {
+                    if ($count == 7) {
+                        echo "<center><h3> No Available Rooms</h3></center>";
+                    }
+                    else {
+                        echo "<center><h3> Available </h3></center>";
+            ?>
+            <center><div class="row" id="reservation_lastrow">
+                <div class="col-md-12" id="reservation_latcolumn"><input id="edit_done" type="submit" name="edit" value="Save"></div>
+            </div></center>
+            <?php } } ?>
         </form>
     </div>
     <footer>

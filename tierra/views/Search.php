@@ -95,15 +95,13 @@
                             <div class="col-md-12" >
                                 <?php
                                     
-                                    /*$link = mysqli_connect("localhost:3306", "root", "", "tierra2");
-					                $query = "SELECT * FROM adminreserve";
+                                    $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Single'";
 							        $res = mysqli_query($link, $query);
                                     $res2 = array();
                                 
-                                    $query2 = "SELECT * FROM book"
-                                
-                                    while ($rows = mysqli_fetch_array($res, MYSQLI_BOTH))
-							        {*/
+                                    while ($rows = mysqli_fetch_assoc($res))
+							        {
                                         
                                 ?>
                                 <div class="jumbotron" id="j1">
@@ -123,18 +121,8 @@
 									<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 									<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 								</a>
-                                    <?php 
-										$link = mysqli_connect("localhost:3306", "root", "", "tierra2");
-					
-										$query = "SELECT * FROM rooms WHERE room_type = 'Single'";
-										$res = mysqli_query($link, $query);
-										$res2 = array();
-			
-										while ($rows = mysqli_fetch_assoc($res))
-										{
-									?>
-                                    <p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate'] ?></strong></p>
-							</div><?php } ?>
+                                    <p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
+                                </div>
                             </div>
                         </div>
                         <div class="row" id="row4">
@@ -166,6 +154,17 @@
                     <div class="col-md-6" id="c2" style="background: #ffffff;">
                         <div class="row" id="row3">
                             <div class="col-md-12" id="row3col">
+                                <?php
+                                    
+                                    $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Double'";
+							        $res = mysqli_query($link, $query);
+                                    $res2 = array();
+                                
+                                    while ($rows = mysqli_fetch_assoc($res))
+							        {
+                                        
+                                ?>
                                 <div class="jumbotron" id="j2">
                                     <h3 class="text-center"><strong>DOUBLE </strong></h3>
                                     <hr>
@@ -184,16 +183,8 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<?php
-								$query = "SELECT * FROM rooms WHERE room_type = 'Double'";
-								$res = mysqli_query($link, $query);
-								$res2 = array();
-			
-								while ($rows = mysqli_fetch_assoc($res))
-								{
-							?>
-							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate'] ?></strong></p>
-                                </div><?php } ?>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
+                                </div>
                             </div>
                         </div>
                         <div class="row" id="row4">
@@ -226,6 +217,17 @@
                     <div class="col-md-6" id="c3" style="background: #ffffff;">
                         <div class="row" id="row5">
                             <div class="col-md-12" id="row5col">
+                                <?php
+                                    
+                                    $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Twin Double'";
+							        $res = mysqli_query($link, $query);
+                                    $res2 = array();
+                                
+                                    while ($rows = mysqli_fetch_assoc($res))
+							        {
+                                        
+                                ?>
                                 <div class="jumbotron" id="j3">
                                     <h3 class="text-center"><strong>TWIN DOUBLE</strong></h3>
                                     <hr>
@@ -245,17 +247,9 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<?php
-								$query = "SELECT * FROM rooms WHERE room_type = 'Twin Double'";
-								$res = mysqli_query($link, $query);
-								$res2 = array();
-			
-								while ($rows = mysqli_fetch_assoc($res))
-								{
-							?>
-							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate'] ?></strong></p>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
-							</div><?php } ?>
+                            </div>
                         </div>
                         <div class="row" id="row6">
                             <div class="col-md-12" id="row6col"><input type="submit" name="twin" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
@@ -282,6 +276,17 @@
                     <div class="col-md-6" id="c4" style="background: #ffffff;">
                         <div class="row" id="row7">
                             <div class="col-md-12" id="row7col">
+                                <?php
+                                    
+                                    $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Duplex'";
+							        $res = mysqli_query($link, $query);
+                                    $res2 = array();
+                                
+                                    while ($rows = mysqli_fetch_assoc($res))
+							        {
+                                        
+                                ?>
                                 <div class="jumbotron" id="j4">
                                     <h3 class="text-center"><strong>DUPLEX </strong></h3>
                                     <hr>
@@ -301,17 +306,9 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<?php
-								$query = "SELECT * FROM rooms WHERE room_type = 'Duplex'";
-								$res = mysqli_query($link, $query);
-								$res2 = array();
-			
-								while ($rows = mysqli_fetch_assoc($res))
-								{
-							?>
-							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']?></strong></p>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
-								</div><?php } ?>
+                            </div>
                         </div>
                         <div class="row" id="row8">
                             <div class="col-md-12" id="row8col"><input type="submit" name="duplex" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
@@ -340,6 +337,17 @@
                     <div class="col-md-6" id="c5" style="background: #ffffff;">
                         <div class="row" id="row9">
                             <div class="col-md-12" id="row9col">
+                                <?php
+                                    
+                                    $link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+					                $query = "SELECT room_rate FROM rooms WHERE room_type = 'Presidential Suite'";
+							        $res = mysqli_query($link, $query);
+                                    $res2 = array();
+                                
+                                    while ($rows = mysqli_fetch_assoc($res))
+							        {
+                                        
+                                ?>
                                 <div class="jumbotron" id="j5">
                                     <h3 class="text-center"><strong>PRESDENTIAL SUITE </strong></h3>
                                     <hr>
@@ -360,21 +368,13 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<?php
-								$query = "SELECT * FROM rooms WHERE room_type = 'Presidential Suite'";
-								$res = mysqli_query($link, $query);
-								$res2 = array();
-			
-								while ($rows = mysqli_fetch_assoc($res))
-								{
-							?>
-							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']?></strong></p>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']; } ?></strong></p>
                                 </div>
-								</div><?php } ?>
+                            </div>
                         </div>
                         <div class="row" id="row10">
                             <div class="col-md-12" id="row10col"><input type="submit" name="p_suite" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
-                        </div><?php //} ?>
+                        </div>
                     </div>
                     </form>
                 </div>
