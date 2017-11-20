@@ -123,8 +123,18 @@
 									<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 									<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 								</a>
-                                    <p id="choose_rate1">Rate per Night: <strong>Php </strong></p>
-                                </div>
+                                    <?php 
+										$link = mysqli_connect("localhost:3306", "root", "", "tierra2");
+					
+										$query = "SELECT * FROM rooms WHERE room_type = 'Single'";
+										$res = mysqli_query($link, $query);
+										$res2 = array();
+			
+										while ($rows = mysqli_fetch_assoc($res))
+										{
+									?>
+                                    <p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate'] ?></strong></p>
+							</div><?php } ?>
                             </div>
                         </div>
                         <div class="row" id="row4">
@@ -174,8 +184,16 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<p id="choose_rate1">Rate per Night: <strong>Php </strong></p>
-                                </div>
+							<?php
+								$query = "SELECT * FROM rooms WHERE room_type = 'Double'";
+								$res = mysqli_query($link, $query);
+								$res2 = array();
+			
+								while ($rows = mysqli_fetch_assoc($res))
+								{
+							?>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate'] ?></strong></p>
+                                </div><?php } ?>
                             </div>
                         </div>
                         <div class="row" id="row4">
@@ -227,9 +245,17 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<p id="choose_rate1">Rate per Night: <strong>Php </strong></p>
+							<?php
+								$query = "SELECT * FROM rooms WHERE room_type = 'Twin Double'";
+								$res = mysqli_query($link, $query);
+								$res2 = array();
+			
+								while ($rows = mysqli_fetch_assoc($res))
+								{
+							?>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate'] ?></strong></p>
                                 </div>
-                            </div>
+							</div><?php } ?>
                         </div>
                         <div class="row" id="row6">
                             <div class="col-md-12" id="row6col"><input type="submit" name="twin" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
@@ -275,9 +301,17 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<p id="choose_rate1">Rate per Night: <strong>Php </strong></p>
+							<?php
+								$query = "SELECT * FROM rooms WHERE room_type = 'Duplex'";
+								$res = mysqli_query($link, $query);
+								$res2 = array();
+			
+								while ($rows = mysqli_fetch_assoc($res))
+								{
+							?>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']?></strong></p>
                                 </div>
-                            </div>
+								</div><?php } ?>
                         </div>
                         <div class="row" id="row8">
                             <div class="col-md-12" id="row8col"><input type="submit" name="duplex" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
@@ -326,9 +360,17 @@
 								<span class="collapsed"><i class="fa fa-caret-right"></i>Show More Details</span>
 								<span class="expanded"><i class="fa fa-caret-right"></i>Show Less</span>
 							</a>
-							<p id="choose_rate1">Rate per Night: <strong>Php </strong></p>
+							<?php
+								$query = "SELECT * FROM rooms WHERE room_type = 'Presidential Suite'";
+								$res = mysqli_query($link, $query);
+								$res2 = array();
+			
+								while ($rows = mysqli_fetch_assoc($res))
+								{
+							?>
+							<p id="choose_rate1">Rate per Night: <strong>Php <?php echo $rows['room_rate']?></strong></p>
                                 </div>
-                            </div>
+								</div><?php } ?>
                         </div>
                         <div class="row" id="row10">
                             <div class="col-md-12" id="row10col"><input type="submit" name="p_suite" value="BOOK THIS ROOM" class="submit" style="background: #73a624; color:#ffffff; padding:5px;"/></div>
