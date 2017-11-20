@@ -29,6 +29,8 @@ In opening the file or the website in your browser, follow the steps below:
 
 BUILT WITH
 * Bootstrap - web framework used
+* PHP
+* MySQL
 
 TEAM MEMBERS:
 * ESPINOSA, Merra Elaiza
