@@ -48,7 +48,7 @@
 		$result = $obj->addChar($r_code, $c_in, $c_out, $roomSize, $room_s, $child_ren);
 	}
 	
-	if (isset($_REQUEST["edit"]) && $_REQUEST["edit"] == "Save") {
+	if (isset($_REQUEST["edit"]) && $_REQUEST["edit"] == "Check Availability") {
 		
 		$result = $obj->editChar($r_code, $c_in, $c_out, $roomSize, $room_s, $adult_s, $child_ren);
 	}
