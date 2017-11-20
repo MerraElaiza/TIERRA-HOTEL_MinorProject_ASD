@@ -53,6 +53,11 @@
 		$result = $obj->editChar($r_code, $c_in, $c_out, $roomSize, $room_s, $adult_s, $child_ren);
 	}
 
+    if (isset($_REQUEST["edit"]) && $_REQUEST["edit"] == "Save") {
+		
+		$result = $obj->editChar($r_code, $c_in, $c_out, $roomSize, $room_s, $adult_s, $child_ren);
+	}
+
     if (isset($_REQUEST["delete"]) && $_REQUEST["delete"] == "TRUE") {
         
         $result = $obj->deleteChar($r_code);
