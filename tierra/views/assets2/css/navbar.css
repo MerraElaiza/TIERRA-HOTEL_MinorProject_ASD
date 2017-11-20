@@ -1,0 +1,33 @@
+.navbar-nav > li > a{
+  padding-top:23px;
+  line-height:25px;
+}
+
+ul.nav.navbar-nav.navbar-right{
+  font-size:15px;
+}
+
+.nav.navbar-nav.navbar-right li a{
+  color:white;
+  font-family:sans-serif;
+  padding-bottom:5px;
+  font-family:'Open Sans';
+}
+
+.navbar{
+  background:#373737;
+  border:none;
+}
+
+.navbar-nav > li > a{
+  padding-top:23px;
+  line-height:25px;
+  font-family:'Open Sans';
+}
+
+.nav.navbar-nav.navbar-right li a{
+  color:white;
+  font-family:sans-serif;
+  padding-bottom:10px;
+}
+
